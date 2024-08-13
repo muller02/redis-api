@@ -1,0 +1,11 @@
+spring:
+  config:
+    import: "classpath:redis-host.yml"
+
+server:
+  port: 8081
+
+#Redis
+redis:
+  host: ${redis.host}
+  port: ${redis.port}

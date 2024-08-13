@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+<!-- 로그 파일에 로그 출력 -->
+<appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+    <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+        <!-- 매일 새로운 로그 파일 생성 -->
+        <fileNamePattern>logs/application-%d{yyyy-MM-dd}.log</fileNamePattern>
+        <!-- 로그 파일을 30일 동안 보관 -->
+        <maxHistory>30</maxHistory>
+    </rollingPolicy>
+    <encoder>
+        <pattern>%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n</pattern>
+    </encoder>
+</appender>
+
+<!-- 루트 로거 설정: INFO 레벨 이상의 로그를 콘솔과 파일에 출력 -->
+<root level="INFO">
+    <appender-ref ref="FILE" />
+</root>
+
+<!-- 패키지별 로거 설정 (예: 디버그 수준 로그를 특정 패키지에서만 출력) -->
+<logger name="com.api.redis_client" level="DEBUG" additivity="false">
+    <appender-ref ref="FILE" />
+</logger>
+
+</configuration>
