@@ -7,7 +7,10 @@
     port: "6379"
 ```
 
-2. bootrun
+2. 로컬 테스트용 redis-docker <br>
+https://github.com/Himedia-CLDS/ELK-stack/tree/redis
+
+3. bootrun
 
 ```
     git clone
@@ -16,7 +19,7 @@
     ./gradlew bootrun
 ```
   
-3. api method
+4. api method
 
    | 메서드 | URL                                                    | 설명             |
    |-----|--------------------------------------------------------|----------------|
@@ -24,7 +27,7 @@
    | GET | /redis/getKey?userId=               | 키값 꺼내기   |
    | POST |/redis/setKey                |키&밸류 세팅|
 
-4. api 작동
+5. api 작동
    ```
      GET /redis/hasKey?userId=  /  return Boolean
      GET /redis/hasKey?userId=      / return UserDTO
