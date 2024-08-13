@@ -1,6 +1,8 @@
 package com.api.redis_client.model;
 
-public class UserDTO {
+import java.io.Serializable;
+
+public class UserDTO implements Serializable{
     private String userId;
     private String gender;
     private String birthYear;
