@@ -23,7 +23,7 @@ public class RedisController {
             service.setKey(userDTO);
             return true;
         } catch (DataAccessException e){
-//            log.error("setKey Error => {}", e.getMessage());
+            log.error("setKey Error => {}", e.getMessage());
             return false;
         }
     }
@@ -34,7 +34,7 @@ public class RedisController {
     }
 
     @GetMapping("getKey")
-    public Map<String, String> getKey(String userId) {
+    public UserDTO getKey(String userId) {
         return service.getKey(userId);
     }
 }

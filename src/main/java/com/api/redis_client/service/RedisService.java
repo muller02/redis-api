@@ -18,22 +18,14 @@ public class RedisService {
     public void setKey(UserDTO userDTO) {
 
         String userId = userDTO.getUserId();
-        String gender = userDTO.getGender();
-        String birthYear = userDTO.getBirthYear();
-
-        // userInfo -> Map
-        Map<String, String> userInfoMap = new HashMap<String, String>();
-        userInfoMap.put("gender", gender);
-        userInfoMap.put("birthYear", birthYear);
-
-        redisTemplate.opsForValue().set(userId, userInfoMap, 24, TimeUnit.HOURS);
+        redisTemplate.opsForValue().set(userId, userDTO, 24, TimeUnit.HOURS);
     }
 
     public boolean hasKey(String userId){
         return redisTemplate.hasKey(userId);
     }
 
-    public  Map<String, String>  getKey(String userId) {
-        return (Map<String, String>)redisTemplate.opsForValue().get(userId);
+    public  UserDTO getKey(String userId) {
+        return (UserDTO)redisTemplate.opsForValue().get(userId);
     }
 }
