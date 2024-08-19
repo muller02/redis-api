@@ -24,6 +24,10 @@ dependencies {
 	implementation 'org.projectlombok:lombok'
 	annotationProcessor 'org.projectlombok:lombok'
 
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
+
 	// https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-data-redis
 	implementation 'org.springframework.boot:spring-boot-starter-data-redis:3.2.2'
 	// https://mvnrepository.com/artifact/redis.clients/jedis
