@@ -1,6 +1,6 @@
 spring:
   config:
-    import: "classpath:redis-host.yml"
+    import: "classpath:redis-config.dev.yml"
 
 server:
   port: 8081
