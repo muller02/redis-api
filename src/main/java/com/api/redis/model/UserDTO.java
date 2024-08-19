@@ -1,4 +1,4 @@
-package com.api.redis_client.model;
+package com.api.redis.model;
 
 import java.io.Serializable;
 

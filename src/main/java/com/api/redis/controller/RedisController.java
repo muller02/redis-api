@@ -1,13 +1,11 @@
-package com.api.redis_client.controller;
+package com.api.redis.controller;
 
-import com.api.redis_client.model.UserDTO;
-import com.api.redis_client.service.RedisService;
+import com.api.redis.model.UserDTO;
+import com.api.redis.service.RedisService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataAccessException;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.Map;
 
 @RestController
 @RequestMapping("redis")

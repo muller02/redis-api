@@ -1,12 +1,10 @@
-package com.api.redis_client.service;
+package com.api.redis.service;
 
-import com.api.redis_client.model.UserDTO;
+import com.api.redis.model.UserDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
 
-import java.util.HashMap;
-import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
 @Service

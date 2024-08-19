@@ -1,4 +1,4 @@
-package com.api.redis_client;
+package com.api.redis;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
