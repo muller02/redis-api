@@ -4,7 +4,7 @@ Bottletalk의 User id, gender, birthYear를 담아두는 캐시인 Redis를 사�
 
 ## Run
 1. 로컬 테스트용 docker-redis <br/>
-https://github.com/Himedia-CLDS/docker-redis
+https://github.com/muller02/docker-redis
 
 2. test & bootrun
 
