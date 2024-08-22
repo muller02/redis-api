@@ -11,19 +11,12 @@ https://github.com/Himedia-CLDS/docker-redis
 ```
     git clone
     cd redis-api/
-    ./gradlew test
     ./gradlew build
     ./gradlew bootrun
 ```
   
-3. api method
 
-   | 메서드 | URL                                                    | 설명             |
-   |-----|--------------------------------------------------------|----------------|
-   | GET | /redis/hasKey?userId=                     | 키값 존재유무 확인   |
-   | GET | /redis/getKey?userId=               | 키값 꺼내기   |
-   | POST |/redis/setKey                |키&밸류 세팅|
+<br/>
+Swagger API Yaml :  https://github.com/Himedia-CLDS/redis-api/blob/main/openapi.yaml <br/><br/>
 
-
-4. Test Code<br/>
-   https://github.com/Himedia-CLDS/redis-api/blob/main/src/test/java/RedisServiceTest.java
+![asdasd](https://github.com/user-attachments/assets/3895c5e9-a4ba-4768-9b01-114fbec638f3)
