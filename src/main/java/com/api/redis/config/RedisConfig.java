@@ -29,20 +29,4 @@ public class RedisConfig {
         template.setConnectionFactory(redisConnectionFactory);
         return template;
     }
-
-//    @Bean
-//    public RedisConnectionFactory redisConnectionFactory() {
-//        RedisStandaloneConfiguration config = new RedisStandaloneConfiguration(redisHost, redisPort);
-//        JedisClientConfiguration jedisClientConfiguration = JedisClientConfiguration.builder().usePooling().build();
-//        return new JedisConnectionFactory(config, jedisClientConfiguration);
-//    }
-//
-//    @Bean
-//    public RedisTemplate<String, Object> redisTemplate(RedisConnectionFactory redisConnectionFactory) {
-//        RedisTemplate<String, Object> template = new RedisTemplate<>();
-//        template.setConnectionFactory(redisConnectionFactory);
-//        template.setKeySerializer(new StringRedisSerializer());
-//        template.setValueSerializer(new GenericJackson2JsonRedisSerializer());
-//        return template;
-//    }
 }
