@@ -1,0 +1,73 @@
+openapi: 3.0.1
+info:
+  title: OpenAPI definition
+  version: v0
+servers:
+  - url: http://localhost:8081
+    description: Generated server url
+paths:
+  /redis/setKey:
+    post:
+      tags:
+        - redis-controller
+      operationId: setKey
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UserDTO'
+        required: true
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: boolean
+  /redis/hasKey:
+    get:
+      tags:
+        - redis-controller
+      operationId: hasKey
+      parameters:
+        - name: userId
+          in: query
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: boolean
+  /redis/getKey:
+    get:
+      tags:
+        - redis-controller
+      operationId: getKey
+      parameters:
+        - name: userId
+          in: query
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/UserDTO'
+components:
+  schemas:
+    UserDTO:
+      type: object
+      properties:
+        userId:
+          type: string
+        gender:
+          type: string
+        birthYear:
+          type: string

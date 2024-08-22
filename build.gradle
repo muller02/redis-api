@@ -24,6 +24,8 @@ dependencies {
 	implementation 'org.projectlombok:lombok'
 	annotationProcessor 'org.projectlombok:lombok'
 
+    // Springdoc OpenAPI dependency
+    implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.2.0'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
     testImplementation 'org.junit.jupiter:junit-jupiter-api'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
